@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cito Rekentoets 3F 2012</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body onload="loadTest()">
+<div class="container">
+    <header>
+        <div class="header-left">
+            <p id="status">Voorwoord</p>
+        </div>
+        <div class="header-right">
+            <img onclick="window.print()" style="cursor: pointer;" src="img/print.png">
+            <a class="volgende" id="volgende" onclick="nextQuestion()">volgende</a>
+            <a class="vorige disableButton">vorige</a>
+        </div>
+    </header>
+    <div style="clear: both;"></div>
+    <div class="allContent">
+        <div class="imageBox" style="display: none;"><img id="inputImage" width="425"></div>
+        <div class="contentBox">
+            <p id="inputDesc"></p>
+            <b id="inputQuestion"></b>
+            <p id="inputField"></p>
+            <div class="calculatorButton" style="display: none;"><img id="inputCalculator" onclick="Show_Calculator()"></div>
+            <div id="Calculator" hidden>
+                <form Name="calc">
+                    <table>
+                        <tr>
+                            <td colspan=3><input type=text Name="display"></td>
+                            <td><input type=button value="C" OnClick="calc.display.value=''"></td>
+                        </tr>
+                        <tr>
+                            <td><input type=button value="7" OnClick="calc.display.value+='7'"></td>
+                            <td><input type=button value="8" OnClick="calc.display.value+='8'"></td>
+                            <td><input type=button value="9" OnClick="calc.display.value+='9'"></td>
+                            <td><input type=button value="+" OnClick="calc.display.value+='+'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type=button value="4" OnClick="calc.display.value+='4'"></td>
+                            <td><input type=button value="5" OnClick="calc.display.value+='5'"></td>
+                            <td><input type=button value="6" OnClick="calc.display.value+='6'"></td>
+                            <td><input type=button value="-" OnClick="calc.display.value+='-'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type=button value="1" OnClick="calc.display.value+='1'"></td>
+                            <td><input type=button value="2" OnClick="calc.display.value+='2'"></td>
+                            <td><input type=button value="3" OnClick="calc.display.value+='3'"></td>
+                            <td><input type=button value="x" OnClick="calc.display.value+='*'"></td>
+                        </tr>
+                        <tr>
+                            <td><input type=button value="0" OnClick="calc.display.value+='0'"></td>
+                            <td><input type=button value="." OnClick="calc.display.value+='.'"></td>
+                            <td><input type=button value="=" OnClick="calc.display.value=eval(calc.display.value)"></td>
+                            <td><input type=button value="/" OnClick="calc.display.value+='/'"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="gameOver" style="display: none;"><p id="gameOverText"></p></div>
+    <div id="gameOverAnswers"></div>
+    <div id="printBox"></div>
+    <div class="clear"></div>
+</div>
+<div style="clear: both;"></div>
+
+
+
+</body>
+</html>

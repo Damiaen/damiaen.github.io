@@ -1,0 +1,135 @@
+body {
+    font-family: arial;
+    height: 600px;
+    overflow: scroll;
+}
+
+.container {
+    width: 875px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+}
+
+.header-left {
+    float: left;
+    color: black;
+    font-weight: bold;
+}
+
+.header-right {
+    float: right;
+}
+
+.header-right a {
+    float: right;
+    height: 32px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.vorige {
+    padding-left: 35px;
+    background: url('../img/btn_default.png') no-repeat;
+    cursor:default;
+}
+
+.volgende {
+    padding-left: 10px;
+    padding-right: 35px;
+    background: url('../img/btn_default.png') no-repeat;
+    background-position: right center;
+}
+
+.disableButton {
+    color: #888;
+    opacity: 0.2;
+    cursor:default;
+}
+
+.imageBox {
+    float: left;
+    width: 425px;
+    height: 200px;
+}
+
+.imageABox {
+    float: left;
+    width: 425px;
+    display: inline-block;
+}
+
+.contentBox {
+    float: right;
+    width: 425px;
+    height: 250px;
+}
+
+input[type="text"], select {
+    width: 225px;
+    height: 35px;
+    font-size: 25px;
+}
+
+#gameOver {
+    width: 875px;
+    margin: 0;
+}
+
+#gameOverText {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 28px;
+    padding: 28px;
+    text-align: center;
+}
+
+#gameOverAnswers {
+    overflow-y: auto;
+    width: 875px;
+    height: 500px;
+    display: none;
+}
+
+.red {
+    background-color: #ff4c4c;
+}
+
+.green {
+    background-color: #009a00;
+}
+
+.whole {
+    display: inline-block;
+    width: 100%;
+}
+
+
+/* calculator */
+#Calculator {
+    background: #168DCA;
+    height:272px ;
+    width:218px ;
+    border-radius: 4px;
+}
+
+input[name="display"] {
+    background-color: #D9EDF7;
+    border:solid 1px #D9EDF7;
+    height: 40px;
+    width: 155px;
+    font-size: 24px;
+}
+
+input[type="button"] {
+    background: #D9EDF7;
+    width: 50px;
+    height: 50px;
+    font-size: 24px ;
+    border: solid 1px #168DCA;
+    display:inline-block;
+}
+
+input[type="button"]:hover{
+    background: #C3D5DE;
+}

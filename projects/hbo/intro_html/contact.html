@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="css/style.css">
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: dodgerblue;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: dodgerblue;
+    }
+</style>
+<body>
+
+<!-- Header -->
+<div class="header" style="background-image: url(assets/bg.jpg); height: 250px">
+
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a  href="index.html">Home</a>
+    <a href="hobby.html">Hobby</a>
+    <a class="active" href="contact.html">Contact</a>
+</div>
+
+<div class="content">
+    <h3 style="display: block; text-align: center">Contacteer mij</h3>
+
+    <div class="flex-container" style="margin-left: 15%; margin-right: 15%;">
+        <form>
+            <label for="fname">Voornaam</label>
+            <input required type="text" id="fname" name="firstname" placeholder="Voornaam">
+
+            <label for="email">Email</label>
+            <input required type="email" id="email" name="email" placeholder="Email">
+
+            <label for="onderwerp">Onderwerp</label>
+            <input required type="text" id="onderwerp" name="onderwerp" placeholder="Onderwerp">
+
+            <label for="country">Onderwerp selecteren</label>
+            <select id="country" name="country">
+                <option  selected >Info</option>
+                <option>Werk</option>
+                <option >Opleiding</option>
+                <option >Info</option>
+                <option >Hobby's</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea required id="subject" name="subject" placeholder="Vul hier uw vraag in" style="height:200px"></textarea>
+
+            <input type="submit" value="Versturen">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

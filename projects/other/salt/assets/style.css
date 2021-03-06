@@ -1,0 +1,49 @@
+body{
+	background: url('Eloheaven.jpg');
+    	background-size:cover;
+        background-repeat: no-repeat;
+}
+
+.salt-content{
+	position: relative
+}
+
+.salt-text{
+    font-family:Comic Sans MS;
+    color:white;
+    text-align:center;
+}
+
+#salt-img{
+	width: 200px;
+	height: 200px;
+	display: block;
+    	margin: 0 auto;
+}
+
+#salt-bronzelyf{
+	position: relative;
+    	display: block;
+    	margin: 0 auto;
+	   top: 200px;
+}
+
+
+
+.rotate {
+    -webkit-animation: spin 3s infinite linear;
+    animation: spin 3s infinite linear;
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+@keyframes spin {
+    100% {
+        -moz-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg);
+    }
+}

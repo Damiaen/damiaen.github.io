@@ -1,0 +1,149 @@
+body{
+    font-family: Trebuchet MS, Lucida Sans Unicode, Arial, sans-serif;
+    height: 600px;
+    overflow: scroll;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin-top: 10px;
+    font-size: 0;
+}
+
+.sudokuboard{
+    position: fixed;
+    left:190px;
+    top:70px;
+    width:456px;
+    height:456px;
+    border:1px solid #898989 ;
+}
+
+#Options{
+    position:fixed;
+    left:680px;
+    top:70px;
+    width:160px;
+    height:204px;
+    border: 4px solid #898989 ;
+    background-color:#E9E9E9 ;
+    font-size:14px;
+}
+
+.NumberBar1{
+    position:fixed;
+    left: 124px;
+    top: 70px;
+    width: 48px;
+    height: 458px;
+}
+
+.NumberBar2{
+    position:fixed;
+    left:190px;
+    top: 10px;
+    width: 458px;
+    height: 48px;
+}
+
+.Num_btn{
+    background: #b0b0b0;
+    width: 51px;
+    height: 51px;
+    padding: 5px;
+    font-size: 24px ;
+    line-height: 1;
+    border: 1px;
+}
+
+button:hover {
+    background: #9a9a9a;
+}
+
+.sudokuSquare,.sudokuSquareHighlighted{
+    width:46px;
+    height:46px;
+    float:left;
+    border:1px solid #DCDCDC ;
+    padding:1px;
+    line-height:46px;
+    font-size:28px;
+    text-align:center;
+    background-color:#FFF;
+    cursor:default;
+}
+
+.sudokuSquareHighlighted{
+    border:2px solid #7A007A;
+    width:46px;
+    height:46px;
+    padding:0;
+    background-color:#D119A3;
+}
+
+.sudokuSection{
+    width:150px;
+    height:150px;
+    border:1px solid #898989;
+    float:left;
+}
+
+.difficulty select{
+    background: #b0b0b0;
+    width: 160px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    border-radius: 1px;
+    height: 34px;
+}
+
+.Menu_btn{
+    background: #b0b0b0;
+    width: 160px;
+    padding: 5px;
+    font-size: 14px;
+    line-height: 1;
+    border: 0;
+    height: 34px;
+}
+
+.Help{
+    text-align: left;
+    position: fixed;
+    width: 458px;
+    height: 458px;
+    top:70px;
+    left: 190px;
+    background-color:grey;
+    opacity: 0.95;
+}
+
+.HelpText{
+    margin-left:10px;
+    font-size: 18px;
+}
+
+.HelpExit{
+    text-align: center;
+    font-size:15px;
+    margin:90px;
+}
+
+#GameOver{
+    position: absolute;
+    width: 458px;
+    height: 457px;
+    top:70px;
+    left: 190px;
+    text-align: center;
+}
+#GameOverImg {
+    position: fixed;
+    width: 458px;
+    height: 457px;
+    top: 70px;
+    left: 190px;
+}

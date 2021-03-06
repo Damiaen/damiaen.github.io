@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /dev/
+Disallow: /ghosts/
+Disallow: /projects/
+Disallow: /storage/

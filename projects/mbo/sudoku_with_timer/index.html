@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sudoku</title>
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body onload="initSudoku()">
+    <div class="container">
+        <div class="sudokuboard" id="sudoku">
+        <div class="sudokuSection" id="sudokuSection0">
+            <div class="sudokuSquare" id="square_0_0"><span></span><span></span></div><div class="sudokuSquare" id="square_0_1"><span></span><span></span></div><div class="sudokuSquare" id="square_0_2"><span></span><span></span></div><div class="sudokuSquare" id="square_1_0"><span></span><span></span></div><div class="sudokuSquare" id="square_1_1"><span></span><span></span></div><div class="sudokuSquare" id="square_1_2"><span></span><span></span></div><div class="sudokuSquare" id="square_2_0"><span></span><span></span></div><div class="sudokuSquare" id="square_2_1"><span></span><span></span></div><div class="sudokuSquare" id="square_2_2"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection1">
+            <div class="sudokuSquare" id="square_0_3"><span></span><span></span></div><div class="sudokuSquare" id="square_0_4"><span></span><span></span></div><div class="sudokuSquare" id="square_0_5"><span></span><span></span></div><div class="sudokuSquare" id="square_1_3"><span></span><span></span></div><div class="sudokuSquare" id="square_1_4"><span></span><span></span></div><div class="sudokuSquare" id="square_1_5"><span></span><span></span></div><div class="sudokuSquare" id="square_2_3"><span></span><span></span></div><div class="sudokuSquare" id="square_2_4"><span></span><span></span></div><div class="sudokuSquare" id="square_2_5"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection2">
+            <div class="sudokuSquare" id="square_0_6"><span></span><span></span></div><div class="sudokuSquare" id="square_0_7"><span></span><span></span></div><div class="sudokuSquare" id="square_0_8"><span></span><span></span></div><div class="sudokuSquare" id="square_1_6"><span></span><span></span></div><div class="sudokuSquare" id="square_1_7"><span></span><span></span></div><div class="sudokuSquare" id="square_1_8"><span></span><span></span></div><div class="sudokuSquare" id="square_2_6"><span></span><span></span></div><div class="sudokuSquare" id="square_2_7"><span></span><span></span></div><div class="sudokuSquare" id="square_2_8"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection3">
+            <div class="sudokuSquare" id="square_3_0"><span></span><span></span></div><div class="sudokuSquare" id="square_3_1"><span></span><span></span></div><div class="sudokuSquare" id="square_3_2"><span></span><span></span></div><div class="sudokuSquare" id="square_4_0"><span></span><span></span></div><div class="sudokuSquare" id="square_4_1"><span></span><span></span></div><div class="sudokuSquare" id="square_4_2"><span></span><span></span></div><div class="sudokuSquare" id="square_5_0"><span></span><span></span></div><div class="sudokuSquare" id="square_5_1"><span></span><span></span></div><div class="sudokuSquare" id="square_5_2"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection4">
+            <div class="sudokuSquare" id="square_3_3"><span></span><span></span></div><div class="sudokuSquare" id="square_3_4"><span></span><span></span></div><div class="sudokuSquare" id="square_3_5"><span></span><span></span></div><div class="sudokuSquare" id="square_4_3"><span></span><span></span></div><div class="sudokuSquare" id="square_4_4"><span></span><span></span></div><div class="sudokuSquare" id="square_4_5"><span></span><span></span></div><div class="sudokuSquare" id="square_5_3"><span></span><span></span></div><div class="sudokuSquare" id="square_5_4"><span></span><span></span></div><div class="sudokuSquare" id="square_5_5"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection5">
+            <div class="sudokuSquare" id="square_3_6"><span></span><span></span></div><div class="sudokuSquare" id="square_3_7"><span></span><span></span></div><div class="sudokuSquare" id="square_3_8"><span></span><span></span></div><div class="sudokuSquare" id="square_4_6"><span></span><span></span></div><div class="sudokuSquare" id="square_4_7"><span></span><span></span></div><div class="sudokuSquare" id="square_4_8"><span></span><span></span></div><div class="sudokuSquare" id="square_5_6"><span></span><span></span></div><div class="sudokuSquare" id="square_5_7"><span></span><span></span></div><div class="sudokuSquare" id="square_5_8"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection6">
+            <div class="sudokuSquare" id="square_6_0"><span></span><span></span></div><div class="sudokuSquare" id="square_6_1"><span></span><span></span></div><div class="sudokuSquare" id="square_6_2"><span></span><span></span></div><div class="sudokuSquare" id="square_7_0"><span></span><span></span></div><div class="sudokuSquare" id="square_7_1"><span></span><span></span></div><div class="sudokuSquare" id="square_7_2"><span></span><span></span></div><div class="sudokuSquare" id="square_8_0"><span></span><span></span></div><div class="sudokuSquare" id="square_8_1"><span></span><span></span></div><div class="sudokuSquare" id="square_8_2"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection7">
+            <div class="sudokuSquare" id="square_6_3"><span></span><span></span></div><div class="sudokuSquare" id="square_6_4"><span></span><span></span></div><div class="sudokuSquare" id="square_6_5"><span></span><span></span></div><div class="sudokuSquare" id="square_7_3"><span></span><span></span></div><div class="sudokuSquare" id="square_7_4"><span></span><span></span></div><div class="sudokuSquare" id="square_7_5"><span></span><span></span></div><div class="sudokuSquare" id="square_8_3"><span></span><span></span></div><div class="sudokuSquare" id="square_8_4"><span></span><span></span></div><div class="sudokuSquare" id="square_8_5"><span></span><span></span></div>		</div>
+        <div class="sudokuSection" id="sudokuSection8">
+            <div class="sudokuSquare" id="square_6_6"><span></span><span></span></div><div class="sudokuSquare" id="square_6_7"><span></span><span></span></div><div class="sudokuSquare" id="square_6_8"><span></span><span></span></div><div class="sudokuSquare" id="square_7_6"><span></span><span></span></div><div class="sudokuSquare" id="square_7_7"><span></span><span></span></div><div class="sudokuSquare" id="square_7_8"><span></span><span></span></div><div class="sudokuSquare" id="square_8_6"><span></span><span></span></div><div class="sudokuSquare" id="square_8_7"><span></span><span></span></div><div class="sudokuSquare" id="square_8_8"><span></span><span></span></div>		</div>
+
+    </div>
+        <div class="NumberBar" id="NumberBar">
+            <button type="button" class="Num_btn"   value="1"   onclick="NumBar(value)">1</button>
+            <button type="button" class="Num_btn"   value="2"   onclick="NumBar(value)">2</button>
+            <button type="button" class="Num_btn"   value="3"   onclick="NumBar(value)">3</button>
+            <button type="button" class="Num_btn"   value="4"   onclick="NumBar(value)">4</button>
+            <button type="button" class="Num_btn"   value="5"   onclick="NumBar(value)">5</button>
+            <button type="button" class="Num_btn"   value="6"   onclick="NumBar(value)">6</button>
+            <button type="button" class="Num_btn"   value="7"   onclick="NumBar(value)">7</button>
+            <button type="button" class="Num_btn"   value="8"   onclick="NumBar(value)">8</button>
+            <button type="button" class="Num_btn"   value="9"   onclick="NumBar(value)">9</button>
+            <button type="button" class="Num_btn"   value='0'   onclick="NumBar(value)">X</button>
+        </div>
+<div id="Options">
+        <button type="submit" onclick="ClearFields()" class="Menu_btn">Maak vakjes leeg</button>
+        <div class="difficulty">
+            <select id="Difficulty" onchange="switchLevel(value,this);">
+            <option value="1"   >Makkelijk</option>
+            <option value="2"   selected>Gemiddeld</option>
+            <option value="3"   >Moeilijk</option>
+            <option value="4"   >Extreem</option>
+            </select>
+        </div>
+        <button type="submit" class="Menu_btn" onclick="initSudoku()">Nieuwe sudoku</button>
+        <button type="button" class="Menu_btn" onclick="ShowHelp()">Uitleg</button>
+</div>
+
+<div id="score">
+    <div id="timer">
+        Tijd: <span id="time"></span>
+    </div>
+</div>
+
+<div class="Help" id="Help" hidden>
+    <div class="HelpText" id="HelpText">
+    <br>Uitleg:
+    <br>Vul de lege vakjes/cellen met getallen 1 tot en met 9.
+    <br>Geen enkel getal mag zich in dezelfde 3x3 vierkant herhalen.
+    <br>Geen enkel getal mag zich herhalen op dezelfde 9 cellen kolom of rij.
+    <br><br>Besturing:
+    <br>Gebruik de muis of de pijltjestoetsen om lege cellen/vakjes te selecteren.
+    <br>Vul de nummers is met de nummerbalk of met je toetsenbord.
+    <br>Gebruik Backspace, Spatiebalk of de X knop op de nummerbalk om een gevuld vakje te legen.
+    <p class="HelpExit">Druk nog een keer op de uitleg knop om dit venster te sluiten</p>
+    </div>
+</div>
+
+<div id="GameOver" hidden>
+    <img id="GameOverImg" src="img/gameover.png">
+</div>
+
+</div>
+</body>
+</html>

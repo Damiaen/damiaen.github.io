@@ -1,0 +1,66 @@
+{
+    "frontText": "August 2nd, 1955 served as the starting signal for the greatest scientific competition in the history of humanity. </br> The Space Race.</br> </br> In the 14 years that followed, countless individuals came together; through a unified monetary spending and collaborative brain power, they achieved something that was considered impossible in any expectation.</br> </br> On July 20th, 1969, the first people landed on the moon, marking the end of the race. Although there have been a variety of people on the moon until 1972. In the nearly 50 years that followed, nothing has ever been on the moon again",  
+
+    "SE": "Software Engineering",  
+    "ME": "Mechanical Engineering",
+    "EE": "Electrical Engineering",
+
+    "ResearchPhase": "Research Phase",
+    "ResearchDesignPhase": "Research and Design Phase",
+    "DesignPhase": "Design Phase",
+    "PrototypePhase": "Prototype Phase",
+    "RealizationPhase": "Realization Phase",
+
+    "SEwk1": "The start of a new project for Software Engineering! This is the first project where interdisciplinary work is required, so it is key to have clear communication and rules about planning and cooperation. This week is mainly focused on planning ahead, setting up the development environment and making sure everyone knows how to work in a SCRUM environment. Besides this, the Software Engineers will be exploring the WeBots simulation and will be following the appropriate tutorials to better be able to work with it.",
+    "MEwk1": "In the fourth trimester of year two we have been tasked with an interdisciplinary project; it is the last project to close out our second year of our Mechanical Engineering bachelor. This week we all started by introducing ourselves and we have all been introduced to the term ‘SCRUM’. Furthermore, we started brainstorming how we’d want the robot to eventually look and work.",
+    "EEwk1": "In the first week we met the software engineers and the students of mechanical engineering. Together we have created a Microsoft Teams group in which we have created a department for each field of study in which we can place our files such as research, diagrams and software projects.",
+
+    "SEwk2": "After a nice week of vacation, we are going back to work this week. In this project week we will make a general plan for the project, put our requirements on paper and communicate these requirements with the other disciplines. After we have properly documented our requirements, we will start designing the software in the form of UML diagrams. We also will document all this well, so that communication between the disciplines does not lead to problems.",
+    "MEwk2": "After a week of vacation we will start the project again. This week we held several brainstorming sessions on how we want to shape the robot. In addition, we have set various design criteria for our design. We also made a quick sketch and a start in Solid Works.",
+    "EEwk2": "In the second week we mainly became familiar with the software package WeBots. By performing the appropriate exercises, we have become aware of how a robot can be implemented and how the robot can be controlled with a controller. At the end of the week we started researching component properties and which of these are the best for our robot.",
+    
+    "SEwk3": "During this sprint we were mainly busy with further designing the software. We have also already conducted small studies into certain software choices that we have to make in this project. We have already made a small start on a test robot in WeBots with one of the latest designs from mechanical engineering. Everyone is eager to get started with the software, but we have to keep working on the designs until they are perfect.",
+    "MEwk3": "In this week we were busy with the first design of the robot, we completed the orientation and analysis phase and we also started making an engineering model.",
+    "EEwk3": "In the third week we continued to investigate component properties. Furthermore, this week we have been busy drawing up an OSI model for our controller. In addition, we investigated what the Transfer Control Protocol entails and a software engineering student helped us how to implement this in our controller.",
+     
+    "SEwk4": "The time to make diagrams is over (yay) and we have started with the real programming work. This week, the partial function demo is central, here we showed our progress and we received feedback from teachers that will use. Furthermore, this week the first real model of mechanical engineering was loaded into WeBots, there is a basic structure of the code and we now have voice control.",
+    "MEwk4": "This week was all about making an engineering model and we started by selecting the materials and calculating any parts.",
+    "EEwk4": "In the fourth week we started learning the C # programming language and the Object Oriented Programming concept. Later that week we started programming the controller in the Windows Forms environment in Visual Studio.",
+   
+    "SEwk5": "This week, the further development of the robot and the making of our individual studies are central. As a research, each team member will take a part of the created software to conduct research individually using the 4 + 1 model. The robot was also further developed during this week, such as implementing new models from the mechanical engineering students and setting up the first assignments that the robot must carry out with Machine Intelligence and Vision.",
+    "MEwk5": "In this week we delivered a new model to software engineering and they have therefore implemented it in WeBots. We have also selected the materials and various purchasing parts that make the robot complete. Various simulations have also been carried out to see how the robot responds to different forces.",
+    "EEwk5": "After programming started in the fourth week, this week we managed to send messages from the client to the server with the Transfer Control Protocol (TCP). Now we were able to determine the commands with the data types sent with TCP. We also started this week with the schematic drawing of the robot in Altium.",
+    
+    "SEwk6": "It is already week 6 of the project! This week, the focus was mainly on preparing for the integration demo and completing the individual studies. During this demo we will show what we have achieved so far and show what we have done with the previous feedback we received. Furthermore, the intention is to complete as much as possible this week, because week 7 of the project contains the individual assessment of software engineering.",
+    "MEwk6": "In this week we had a demo to show what we have made so far. The feedback was good and we will continue to work with that. The emphasis had to be a little more on finishing things faster. We also delivered the last Solid Works model this week with the latest changes.",
+    "EEwk6": "After finishing the controller in the fifth week, we searched together with the mechanical engineering students for motors that will drive the robot and make the arm move. We have put these motors and most components that come into the robot in the electrical drawing package. At the end of the week we set up a software fourier transformation with a software engineering student to sample bass, middle and treble. This is necessary to recognize the beat of the music the robot will be dancing on.",
+
+    "SEwk7": "After our successful integration demo, we arrived in week 7 of the project. The individual studies have been completed and this week the individual / team assessment is central for the software engineering students. In order to prepare ourselves properly for these assessments, we will try to combine as much functionality as possible so that we can present this to the teachers. Furthermore, we will already be preparing for next week, because then we have the qualification.",
+    "MEwk7": "As the mechanical engineering group, we want to finalize the last parts of the project this week, such as 2D drawings complete and calculations ready. We are also well on schedule and are busy preparing for qualification.",
+    "EEwk7": "In the second-to-last sprint, we were mainly busy with finishing the last touches. We were trying to complete the electrical drawing package, the component list and calculate the energy consumption of the entire robot.",
+    
+    "SEwk8": "After the very successful assessment of the software engineering group (everyone had a 9 out of 10), we started with a lot of motivation on the final stages of the qualification day. All the work of the various ICT team members will be combined into one central project this week. Where necessary, people will step in to help other team members and test as much functionality of the robot as possible. We will also make videos for each part of the qualification, which we will submit as evidence.",
+    "MEwk8": "The last week has arrived. We as mechanical engineering group were busy compiling all the documentation. In addition, we have been focusing on making some qualifying videos.",
+    "EEwk8": "In this last sprint, we, the electrical engineering group, were busy with the final calculations. We have also recorded videos for the competition and provided the accompanying documentation.",
+    
+    "PF": "Progress File",
+    "PFOnlyDutch": " (Only available in Dutch)",
+    "PFwk2": "Progress File 1",
+    "PFwk3": "Progress File 2",
+    "PFwk4": "Progress File 3",
+    "PFwk5": "Progress File 4",
+    "PFwk7": "Progress File 5",
+    "PFwk8": "Progress File 6",
+
+    "MeetTeam": "Meet our Team",
+
+    "days": "days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "link": "Until now...",
+    "timeline": "Timeline",
+    "CountdownNav": "Countdown",
+    "Countdown": "Countdown to launch:"
+    
+  }

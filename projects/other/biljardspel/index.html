@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tryout Project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+<script src="js/three.min.js"></script>
+<script src="js/Physics.js"></script>
+<script src="js/ball.js"></script>
+<script src="js/OrbitControls.js"></script>
+<div style="display: inline-block">
+    <p>Player 1 score<input type="text" id="p1_score" readonly="true"></p>
+</div>
+<div style="display: inline-block">
+    <p>Player 2 score<input type="text" id="p2_score" readonly="true"></p>
+</div>
+<div style="display: inline-block">
+    <input type="text" id="turn" readonly="true" >
+</div>
+<script>
+
+    var keu = null;
+
+    //Scene setup
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    var renderer = new THREE.WebGLRenderer();
+    var directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
+    directionalLight.position.set( 0, 1, 0 );
+    scene.add( directionalLight );
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setClearColor(0x000000);
+    document.body.appendChild(renderer.domElement);
+
+    //Camera positioning
+    camera.position.z = 20;
+    camera.position.y = 20;
+
+    //Orbit controls
+    var controls = new THREE.OrbitControls(camera);
+    controls.addEventListener('change');
+
+    //Objects
+    var loader = new THREE.ObjectLoader();
+    loader.load('models/tafel.json', function(tafel){
+        scene.add(tafel);
+    });
+
+    var groundMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff } );
+    var ground = new THREE.Mesh( new THREE.PlaneBufferGeometry(100,100,2,2), groundMaterial);
+    ground.position.y = -2;
+    ground.rotation.x = - Math.PI / 2;
+    scene.add(ground);
+
+    scene.add( new THREE.AmbientLight(0x111111));
+
+
+    var blackBall = blackSphere;
+    blackBall.position.y = 0.5;
+    blackBall.position.x = 0;
+    blackBall.position.z = -7.875;
+    scene.add(blackBall);
+
+
+    var whiteBall = whiteSphere;
+    whiteBall.position.y = 0.5;
+    whiteBall.position.z = 5.875;
+    whiteBall.position.x = 0;
+    scene.add(whiteBall);
+
+
+    var blueBall1 = blueSphere1;
+    blueBall1.position.y = 0.5;
+    blueBall1.position.x = -0.55;
+    blueBall1.position.z = -6.875;
+    scene.add(blueBall1);
+
+    var blueBall2 = blueSphere2;
+    blueBall2.position.y = 0.5;
+    blueBall2.position.x = 0.55;
+    blueBall2.position.z = -6.875;
+    scene.add(blueBall2);
+
+    var blueBall3 = blueSphere3;
+    blueBall3.position.y = 0.5;
+    blueBall3.position.x = -1.6;
+    blueBall3.position.z = -8.875;
+    scene.add(blueBall3);
+
+    var blueBall4 = blueSphere4;
+    blueBall4.position.y = 0.5;
+    blueBall4.position.x = 0.55;
+    blueBall4.position.z = -8.875;
+    scene.add(blueBall4);
+
+    var blueBall5 = blueSphere5;
+    blueBall5.position.y = 0.5;
+    blueBall5.position.x = -2.1;
+    blueBall5.position.z = -9.875;
+    scene.add(blueBall5);
+
+    var blueBall6 = blueSphere6;
+    blueBall6.position.y = 0.5;
+    blueBall6.position.x = 0;
+    blueBall6.position.z = -9.875;
+    scene.add(blueBall6);
+
+    var blueBall7 = blueSphere7;
+    blueBall7.position.y = 0.5;
+    blueBall7.position.x = 2.1;
+    blueBall7.position.z = -9.875;
+    scene.add(blueBall7);
+
+
+    var redBall1 = redSphere1;
+    redBall1.position.y = 0.5;
+    redBall1.position.x = 0;
+    redBall1.position.z = -5.875;
+    scene.add(redBall1);
+
+    var redBall2 = redSphere2;
+    redBall2.position.y = 0.5;
+    redBall2.position.z = -8.875;
+    redBall2.position.x = -0.55;
+    scene.add(redBall2);
+
+    var redBall3 = redSphere3;
+    redBall3.position.y = 0.5;
+    redBall3.position.x = 1.05;
+    redBall3.position.z = -7.875;
+    scene.add(redBall3);
+
+    var redBall4 = redSphere4;
+    redBall4.position.y = 0.5;
+    redBall4.position.x = -1.05;
+    redBall4.position.z = -7.875;
+
+    scene.add(redBall4);
+
+    var redBall5 = redSphere5;
+    redBall5.position.y = 0.5;
+    redBall5.position.x = 1.6;
+    redBall5.position.z = -8.875;
+    scene.add(redBall5);
+
+
+    var redBall6 = redSphere6;
+    redBall6.position.y = 0.5;
+    redBall6.position.x = -1.05;
+    redBall6.position.z = -9.875;
+    scene.add(redBall6);
+
+    var redBall7 = redSphere7;
+    redBall7.position.y = 0.5;
+    redBall7.position.x = 1.05;
+    redBall7.position.z = -9.875;
+    scene.add(redBall7);
+
+    //keu
+    var isRemoved = false;
+    var loader2 = new THREE.ObjectLoader();
+    loader2.load('models/model3.json', function(keeu){
+        keu = keeu;
+        keu.position.x = whiteBall.position.x;
+        keu.position.y = 0.5;
+        keu.position.z = whiteBall.position.z + 6;
+        scene.add(keu);
+    });
+
+    //rotation variables
+    const distance = 1;
+    const speed = 0.03;
+    var counter = 0;
+
+    //key handlers
+    var isRightPressed = false;
+    var isLeftPressed = false;
+    var isShoot = false;
+    var ballSpeed;
+    document.addEventListener("keydown", handleKeyDown, false);
+    document.addEventListener("keyup", handleKeyUp, false);
+
+
+    function handleKeyDown(e)
+    {
+        if(e.keyCode == 65)
+        {
+            isRightPressed = true;
+        } else if(e.keyCode == 68)
+        {
+            isLeftPressed = true;
+        }
+        else if(e.keyCode == 86)
+        {
+            if(whiteBall.speed == 0) {
+                isShoot = true;
+                ballSpeed = 1;
+            }
+        }
+        else if(e.keyCode == 32)
+        {
+            if(whiteBall.speed == 0) {
+                isShoot = true;
+                ballSpeed = 0.5;
+            }
+        }
+    }
+
+    function handleKeyUp(e)
+    {
+        if(e.keyCode == 65)
+        {
+            isRightPressed = false;
+        } else if(e.keyCode == 68)
+        {
+            isLeftPressed = false;
+        }
+    }
+
+    //shoot function
+    function shoot() {
+        if (whiteBall.speed == 0 && (!p1Win || !p2Win))
+        {
+            whiteBall.directionX = -(keu.position.x - whiteBall.position.x - (5 * Math.sin(counter)));
+            whiteBall.directionZ = -(keu.position.z - whiteBall.position.z - (5 * Math.cos(counter)));
+            whiteBall.speed = ballSpeed;
+            isShoot = false;
+            console.log(whiteBall.directionX);
+            console.log(whiteBall.directionZ);
+        }
+    }
+
+    //keu rotation function
+    function rotateKeu()
+    {
+        if(whiteBall.speed == 0 && whiteBall.speed == 0)
+        {
+            if(isRemoved)
+            {
+                scene.add(keu);
+                keu.position.x = whiteBall.position.x + (distance + 5) * Math.sin(counter);
+                keu.position.z = whiteBall.position.z + (distance + 5) * Math.cos(counter);
+                isRemoved = false;
+            }
+            if(isRightPressed)
+            {
+                counter -= speed;
+                keu.rotateZ(-0.03);
+                keu.position.x = whiteBall.position.x + (distance + 5) * Math.sin(counter);
+                keu.position.z = whiteBall.position.z + (distance + 5) * Math.cos(counter);
+            } else if(isLeftPressed)
+            {
+                counter += speed;
+                keu.rotateZ(0.03);
+                keu.position.x = whiteBall.position.x + (distance + 5) * Math.sin(counter);
+                keu.position.z = whiteBall.position.z + (distance + 5) * Math.cos(counter);
+            }
+        }else
+        {
+            if(!isRemoved)
+            {
+                scene.remove(keu);
+                isRemoved = true;
+            }
+        }
+    }
+
+    var ballgroup = [whiteBall, redBall1, blueBall1, blueBall2, redBall2, blackBall, redBall3, blueBall3, redBall4, blueBall4, redBall5, blueBall5, redBall6, blueBall6, redBall7, blueBall7];
+
+    var blueBalls = [blueBall1, blueBall2, blueBall3, blueBall4, blueBall5, blueBall6, blueBall7];
+    var redBalls = [redBall1, redBall2, redBall3, redBall4, redBall5, redBall6, redBall7];
+
+
+
+    //logic
+    var isRed = false;
+    var isP1Turn = false
+    var p1Score = 0;
+    var p2Score = 0;
+
+    var p1Win = false;
+    var p2Win = false;
+
+    function isFreshGame()
+    {
+        return (p1Score == 0 && p2Score == 0);
+    }
+
+
+    //Renderer
+    function render() {
+        //Render init
+
+        rotateKeu();
+        if(isShoot)
+        {
+            if(!isP1Turn)
+            {
+                isP1Turn = true;
+                console.log("p1 turn");
+            }
+            else
+            {
+                isP1Turn = false;
+                console.log("p2Turn");
+            }
+
+            shoot();
+        }
+        for(var index = 0; index < ballgroup.length; index++)
+        {
+            slowDown(ballgroup[index]);
+            var currentBall = scorePoint(ballgroup[index]);
+            if(blueBalls.indexOf(currentBall) != -1)
+            {
+                ballgroup.splice(ballgroup.indexOf(currentBall),1);
+                if(isFreshGame())
+                {
+                    if(isP1Turn)
+                    {
+                        isRed = false;
+                        isP1Turn = false;
+                        p1Score += 1;
+                    } else
+                    {
+                        isRed = true;
+                        isP1Turn = true;
+                        p2Score += 1;
+                    }
+                } else
+                {
+                    if(isRed)
+                    {
+                        p2Score++;
+                        if(!isP1Turn)
+                            isP1Turn = true;
+                    }
+                    else
+                    {
+                        p1Score++
+                        if(isP1Turn)
+                            isP1Turn = false;
+                    }
+                }
+                console.log("player1:");
+                console.log(p1Score);
+                console.log("player2:");
+                console.log(p2Score);
+            }
+            else if(redBalls.indexOf(currentBall) != -1)
+            {
+                ballgroup.splice(ballgroup.indexOf(currentBall),1);
+                if(isFreshGame())
+                {
+                    if(isP1Turn)
+                    {
+                        isRed = true;
+                        isP1Turn = false;
+                        p1Score += 1;
+                    } else
+                    {
+                        isRed = false;
+                        isP1Turn = true;
+                        p2Score += 1;
+                    }
+                } else
+                {
+
+                    if(isRed)
+                    {
+                        p1Score++;
+                        if(isP1Turn)
+                            isP1Turn = false;
+                    }
+                    else
+                    {
+                        p2Score++;
+                        if(!isP1Turn)
+                            isP1Turn = true;
+                    }
+
+                }
+                console.log("player1:");
+                console.log(p1Score);
+                console.log("player2:");
+                console.log(p2Score);
+            }
+            else if (currentBall == whiteBall){
+                whiteBall.position.y = 0.5;
+                whiteBall.position.z = 5.875;
+                whiteBall.position.x = 0;
+                whiteBall.speed = 0;
+                scene.add(whiteBall);
+            } else if(currentBall == blackBall)
+            {
+                if(isP1Turn)
+                {
+                    if(p1Score != 7)
+                        p2Win = true;
+                    else
+                        p1Win = true;
+                } else
+                {
+                    if(p2Score != 7)
+                        p1Win = true;
+                    else
+                        p2Win = true;
+                }
+            }
+
+            if(p1Win)
+            {
+                console.log("p1Wins");
+                window.alert("Player 1 wins!")
+            } else if(p2Win)
+            {
+                console.log("p2Wins");
+                window.alert("Player 2 wins!")
+            }
+
+            for(var i = 0; i < ballgroup.length; i++)
+            {
+                if(ballgroup.length > 0)
+                {
+                    if(ballgroup[index] != null)
+                    {
+                        if(index != i)
+                            newCollide(ballgroup[index], ballgroup[i]);
+                    }
+                }
+
+            }
+            if(ballgroup[index] != null)
+                collideWall(ballgroup[index]);
+        }
+        //Ball speed vectors
+
+        for(var i = 0; i < ballgroup.length; i++)
+        {
+            var ball = ballgroup[i];
+            ball.position.x += ball.directionX * ball.speed;
+            ball.position.z += ball.directionZ * ball.speed;
+        }
+        document.getElementById("p1_score").value = p1Score;
+        document.getElementById("p2_score").value = p2Score;
+        if(isP1Turn)
+            document.getElementById("turn").value = "Player's 2 turn";
+        else
+            document.getElementById("turn").value = "Player's 1 turn";
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+    }
+    render();
+</script>
+</body>
+</html>
