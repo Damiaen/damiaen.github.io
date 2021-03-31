@@ -17,3 +17,12 @@ git config user.email
 # If not, we can change the e-mail by running:
 git config --gloabl user.email "mail@example.com"
 ```
+
+### GitHub Pages Settings
+To setup Github Pages with an custom domain name, some DNS settings need to be changed. Below is an example of some of the stuff that is required to correctly link said domain to the Github servers.
+
+
+```
+First => Set the @ record to the Github server ip adresses.
+Second => Set CNAME records for www. and the root of the domain, and link these to the @
+```
