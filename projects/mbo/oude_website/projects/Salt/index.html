@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lord of The Salts</title>
+<link rel="shortcut icon" href="favicon.png">
+<link rel="stylesheet" type="text/css" href="assets/style.css" />
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	function playaudio() {
+		var audiosource = document.getElementById('salt-audio');
+		audiosource.play();
+
+	}
+
+	function playfeelsbadman() {
+		var audiosource = document.getElementById('feelsbadman-audio');
+		audiosource.volume = 0.2;
+		audiosource.play();
+
+	}
+
+	function FeelsScarraMan() {
+		var audiosource = document.getElementById('Scarralaugh-audio');
+		audiosource.volume = 0.2;
+		audiosource.play();
+	}
+
+	window.onload = function() {
+	     playfeelsbadman();
+	}
+</script>
+</head>
+<body>	
+<div class="salt-content">	
+	<div class="salt-text">
+	<h1>Reset my MMR for easy wins</h1>
+	</div>
+
+
+	<img id="salt-img" src="assets/saltmeister.png" onclick="playaudio()"/>
+
+	<img id="salt-bronzelyf" class="rotate" src="assets/bronzelyf.png" onclick="FeelsScarraMan()" />
+
+
+
+	<audio id="salt-audio" src="assets/joker.mp3"></audio>
+	<audio id="feelsbadman-audio" src="assets/feelsbadman.mp3"></audio>
+	<audio id="Scarralaugh-audio" src="assets/scarralaugh.mp3"></audio>
+</div>
+</body>
+</html>
