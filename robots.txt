@@ -1,3 +1,4 @@
 User-agent: *
-Disallow: /assets/img
+Disallow: /assets/
 Disallow: /projects/
+Disallow: /storage/
