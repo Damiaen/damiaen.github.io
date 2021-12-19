@@ -1,7 +1,7 @@
 ## damiaen.github.io
 Personal Portfolio website, hosted using GitHub Pages. This site contains old school projects from previous studies and some personal projects. This repository is mainly used for archiving old code for fun.  
 
-The site can be accessed by going to "https://damiaen.github.io" or "https://damiaentoussaint.nl".
+The site can be accessed by going to "https://damiaen.github.io" or "https://damiaen.nl".
 
 ## General Notes
 Some general notes that are not specific to this project, these notes can generally be ignored.

@@ -41,10 +41,5 @@
 })(jQuery);
 
 function openProject(path) {
-	let win = window.open(path, '_blank');
-	if (win) {
-		win.focus();
-	} else {
-		alert('Please allow popups for this website');
-	}
+	window.open(path, '_blank');
 }
