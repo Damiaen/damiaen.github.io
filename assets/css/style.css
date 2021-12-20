@@ -187,7 +187,7 @@ ul, ol {
 
 
 /*------------------------------------*\
-	Logo
+	Navigation
 \*------------------------------------*/
 
 .navbar-brand {
@@ -198,10 +198,6 @@ ul, ol {
     max-height: 50px;
     display: block;
 }
-
-/*------------------------------------*\
-	Navigation
-\*------------------------------------*/
 
 #nav {
     padding: 10px 0px;
@@ -273,13 +269,15 @@ ul, ol {
 
 
 /* -- mobile nav -- */
-
 @media only screen and (max-width: 767px) {
     #nav {
         padding: 0px 0px;
     }
     #nav.nav-transparent {
         background: #212529 !important;
+    }
+    #nav.fixed-nav {
+        padding: 0%;
     }
     .navbar-brand {
         margin-left: 40px !important;
@@ -353,6 +351,9 @@ ul, ol {
         height: auto;
         -webkit-transition: 0.2s all;
         transition: 0.2s all;
+    }
+    .portfolio-content p {
+        display: none;
     }
 }
 
@@ -707,32 +708,6 @@ header {
       text-align: center;
   }
 }
-
-@media only screen and (max-width: 480px) {
-  #portfolio [class*='col-xs'] {
-		  width:100%;
-	}
-
-  #numbers [class*='col-xs'] {
-		  width:100%;
-	}
-
-  .contact-form .input:nth-child(1), .contact-form .input:nth-child(2) {
-      width: 100%;
-  }
-  .contact-form .input:nth-child(2) {
-      margin-left: 0px;
-  }
-
-  .reply-form form .input, .reply-form form .input {
-      width: 100%;
-  }
-  .reply-form form .input:nth-child(2) {
-      margin-left: 0px;
-  }
-
-}
-
 
 /*------------------------------------*\
 	Preloader
